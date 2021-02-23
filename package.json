@@ -8,7 +8,7 @@
     "url": "https://github.com/Nikakulu/buildtools.git"
   },
   "files": [
-    "generators"
+    "app"
   ],
   "keywords": [
     "yeoman-generator"
