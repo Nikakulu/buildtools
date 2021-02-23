@@ -3,6 +3,10 @@
   "version": "0.1.4",
   "description": "cool stuff",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nikakulu/buildtools.git"
+  },
   "files": [
     "generators"
   ],
