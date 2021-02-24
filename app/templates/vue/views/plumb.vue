@@ -1,5 +1,5 @@
 <template>
-    <div class="wrapper">
+    <div class="plumb-wrapper">
         <div  class="container" id="container">
             <div class="desc">操作说明：卡片可拖拽(不可拖出该画布)，删除；连线可双击删除</div>
         </div>
@@ -99,6 +99,9 @@
 </script>
 
 <style>
+    .plumb-wrapper{
+
+    }
     html,
     body {
         width: 100%;

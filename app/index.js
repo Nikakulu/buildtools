@@ -13,6 +13,7 @@ module.exports = class extends Generator {
         // this.log("templateType", destRoot); // user answer `cool` used
         // this.log("Plugins", template); // user answer `cool` used
         mkdirp(path.normalize(destRoot + '/src'));
+        mkdirp(path.normalize(destRoot + '/script'));
         mkdirp(path.normalize(destRoot + '/src/assets'));
         mkdirp(path.normalize(destRoot + '/src/assets/images'));
         mkdirp(path.normalize(destRoot + '/src/assets/images/plumb'));
@@ -25,19 +26,14 @@ module.exports = class extends Generator {
         mkdirp(path.normalize(destRoot + '/config'));
         mkdirp(path.normalize(destRoot + '/src/common/js'));
         mkdirp(path.normalize(destRoot + '/src/assets/style'));
-        // this.fs.copy(template + rootPath + 'app.js', destRoot + '/src/app.js');
         this.fs.copy(path.normalize(template + rootPath + 'webpack.config.base.js'), path.normalize(destRoot + '/config/webpack.config.base.js'));
         this.fs.copy(path.normalize(template + rootPath + 'webpack.config.dev.js'), path.normalize(destRoot + '/config/webpack.config.dev.js'));
         this.fs.copy(path.normalize(template + rootPath + 'webpack.config.dll.js'), path.normalize(destRoot + '/config/webpack.config.dll.js'));
         this.fs.copy(path.normalize(template + rootPath + 'webpack.config.pro.js'), path.normalize(destRoot + '/config/webpack.config.pro.js'));
         this.fs.copy(path.normalize(template + rootPath + 'development.json'), path.normalize(destRoot + '/config/development.json'));
         this.fs.copy(path.normalize(template + rootPath + 'production.json'), path.normalize(destRoot + '/config/production.json'));
-        this.fs.copy(path.normalize(template + rootPath + 'autoCreat/creatPage/template.js'), path.normalize(destRoot + '/src/common/js/template.js'));
-        this.fs.copy(path.normalize(template + rootPath + 'autoCreat/creatPage/index.js'), path.normalize(destRoot + '/src/common/js/index.js'));
-        this.fs.copy(path.normalize(template + rootPath + 'autoCreat/creatComponents/template.js'), path.normalize(destRoot + '/src/common/js/comtemplate.js'));
-        this.fs.copy(path.normalize(template + rootPath + 'autoCreat/creatComponents/index.js'), path.normalize(destRoot + '/src/common/js/comIndex.js'));
-        // this.fs.copy(template + rootPath + '/store/index.js', destRoot + '/src/store/index.js');
-        // this.fs.copy(template + rootPath + '/router/index.js', destRoot + '/src/router/index.js');
+        this.fs.copy(path.normalize(template + rootPath + 'autoCreat/createComponent.js'), path.normalize(destRoot + '/script/createComponent.js'));
+        this.fs.copy(path.normalize(template + rootPath + 'autoCreat/createPage.js'), path.normalize(destRoot + '/script/createPage.js'));
     }
 
     _installNpm() {

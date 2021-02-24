@@ -1,7 +1,7 @@
 <template>
   <div class="about" style="text-align: center">
-    <h1>你好</h1>
     <h1>{{name}}</h1>
+    <button @click="changeLanguage()">切换语言</button>
   </div>
 </template>
 <script>
@@ -9,27 +9,32 @@
   var lang = new Lang({
     messages: {
       'en.greetings': {
-        'hi': 'Hi',
-        'hello': 'Hello'
+        'hi':'Hello',
+        'Home': '主页',
+        'Lang': '语言',
+        'Book': '履职档案',
+        'Plumb': '连线库',
       },
-      'it.greetings': {
-        'hi': 'Salve'
-      }
     }
   });
-
   export default {
     name: "About",
     data(){
       return{
-        name:'',
+        name:'你好',
+      }
+    },
+    methods:{
+      changeLanguage(){
+        lang.setFallback('en');
+        this.name = lang.get('greetings.hi');
+        this.$parent.Msg.Home = lang.get('greetings.Home');
+        this.$parent.Msg.Lang = lang.get('greetings.Lang');
+        this.$parent.Msg.Book = lang.get('greetings.Book');
+        this.$parent.Msg.Plumb = lang.get('greetings.Plumb');
       }
     },
     mounted() {
-      lang.setFallback('en');
-      lang.get('greetings.hello');
-      this.name = lang.get('greetings.hello');
-      console.log(lang.get('greetings.hello'),'lang.js')
     }
   };
 
