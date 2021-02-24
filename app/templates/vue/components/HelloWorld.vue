@@ -14,6 +14,15 @@
       <%_ if (includeAxios) { -%>
       <li class="list-group-item"> Axios </li>
       <%_ } -%>
+      <%_ if (includeEcharts) { -%>
+      <li class="list-group-item"> Echarts </li>
+      <%_ } -%>
+      <%_ if (includeElementUI) { -%>
+      <li class="list-group-item"> ElementUI </li>
+      <%_ } -%>
+      <%_ if (includeLodash) { -%>
+      <li class="list-group-item"> Lodash </li>
+      <%_ } -%>
     </ul>
   </div>
 </template>

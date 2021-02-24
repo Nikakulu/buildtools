@@ -54,6 +54,7 @@ module.exports = class extends Generator {
             includeBook: this.includeBook,                   // 履职档案
             includeTypeScript: this.includeTypeScript,                   // 履职档案
             includeJquery: this.includeJquery,                   // 履职档案
+            includeLodash: this.includeLodash,                   // 履职档案
         };
         const copy = (input, output) => {
             this.fs.copy(this.templatePath(input), this.destinationPath(output));
