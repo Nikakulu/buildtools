@@ -3,15 +3,15 @@
         <%_ if (includeRouter) { -%>
         <div class="appNav">
             <div id="nav" class="nav">
-                <router-link to="/">Home</router-link>
+                <router-link to="/">{{Msg.Home}}</router-link>
                 <%_ if (includeLang) { -%>
-                <router-link to="/about">Lang</router-link>
+                <router-link to="/about">{{Msg.Lang}}</router-link>
                 <%_ } -%>
                 <%_ if (includeBook) { -%>
-                <router-link to="/book">book</router-link>
+                <router-link to="/book">{{Msg.Book}}</router-link>
                 <%_ } -%>
                 <%_ if (includeJsPlumb) { -%>
-                <router-link to="/plumb">plumb</router-link>
+                <router-link to="/plumb">{{Msg.Plumb}}</router-link>
                 <%_ } -%>
             </div>
         </div>
@@ -32,6 +32,24 @@ export default {
         HelloWorld
     }
 };
+</script>
+<%_ } -%>
+
+<%_ if (includeRouter) { -%>
+<script>
+    export default {
+        name: 'app',
+        data() {
+            return {
+                Msg: {
+                    Home:'Home',
+                    Lang:'Lang',
+                    Book:'Book',
+                    Plumb:'Plumb',
+                }
+            }
+        },
+    };
 </script>
 <%_ } -%>
 
