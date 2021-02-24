@@ -7,8 +7,8 @@
     "dll": "webpack --config config/webpack.config.dll.js",
     "dev": "webpack --config config/webpack.config.dll.js && cross-env NODE_ENV=development webpack-dev-server --config config/webpack.config.dev.js --open",
     "build": "webpack --config config/webpack.config.dll.js &&  cross-env NODE_ENV=production webpack --config config/webpack.config.pro.js",
-    "new:view": "node ./src/common/js/index.js",
-    "new:com": "node ./src/common/js/comIndex.js"
+    "view": "node ./script/createPage.js",
+    "comp": "node ./script/createComponent.js"
   },
   "author": "",
   "license": "ISC",

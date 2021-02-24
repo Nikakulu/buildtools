@@ -15,24 +15,25 @@ var appName = '<%= appname %>'.toLocaleLowerCase();
 // >>>>>>>>>>>>>>>>>>>>>>>>>>>>
 var vueTpl = [];
 vueTpl.push("<template>");
-vueTpl.push("<div>hello " + page + " component</div>");
+vueTpl.push("<div class='"+page+"'>hello " + page + " component</div>");
 vueTpl.push("</template>");
 vueTpl.push("<script>");
 vueTpl.push("</script>");
 vueTpl.push("<style >");
+vueTpl.push("."+page+"{}");
 vueTpl.push("</style>");
 vueTpl = vueTpl.join('\n');
 
 
 function writeFile (filename, content) {
 	fs.open(filename, 'w', '0644', function (e, fd) {
-	    
-	    if(e) throw e;
-	    
-	    fs.write(fd, content, function(e){
-	        if(e) throw e;
-	        fs.closeSync(fd);
-	    });
+
+		if(e) throw e;
+
+		fs.write(fd, content, function(e){
+			if(e) throw e;
+			fs.closeSync(fd);
+		});
 	});
 }
 
