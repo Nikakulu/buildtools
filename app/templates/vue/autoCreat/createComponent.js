@@ -20,6 +20,7 @@ vueTpl.push("<template>");
 vueTpl.push("<div class='"+components+"'>hello " + components + " component</div>");
 vueTpl.push("</template>");
 vueTpl.push("<script>");
+vueTpl.push("export default { name:'"+components+"'}");
 vueTpl.push("</script>");
 vueTpl.push("<style >");
 vueTpl.push("."+components+"{}");

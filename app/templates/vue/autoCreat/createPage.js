@@ -18,6 +18,7 @@ vueTpl.push("<template>");
 vueTpl.push("<div class='"+page+"'>hello " + page + " component</div>");
 vueTpl.push("</template>");
 vueTpl.push("<script>");
+vueTpl.push("export default { name:'"+page+"'}");
 vueTpl.push("</script>");
 vueTpl.push("<style >");
 vueTpl.push("."+page+"{}");
@@ -41,4 +42,4 @@ function writeFile (filename, content) {
 writeFile ('src/views/' + page + '.vue', vueTpl);
 
 
-console.log('Create component Success!');
+console.log('Create page Success!');
